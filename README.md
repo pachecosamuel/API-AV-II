@@ -10,7 +10,7 @@
 
 <hr>
 
-#-Grupo 2: Bernardo Gonçalves, Jéssica Sabino, Mateus Reis, Samuel Pacheco, Simone Reis.
+# Grupo 2: Bernardo Gonçalves, Jéssica Sabino, Mateus Reis, Samuel Pacheco, Simone Reis.
 
 <hr>
 
