@@ -21,9 +21,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 @Entity
 @Table(name = "instrutor")
-@JsonIdentityInfo(
-	    generator = ObjectIdGenerators.PropertyGenerator.class,
-	    property = "idInstrutor")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "idInstrutor")
 public class Instrutor {
 
 	@Id
@@ -50,7 +48,7 @@ public class Instrutor {
 	private Integer titulacaoInstrutor;
 
 	@OneToMany(mappedBy = "instrutor")
-	private List<Turma> turmaList; 
+	private List<Turma> turmaList;
 
 	public Date getDataNascimento() {
 		return dataNascimento;
@@ -60,13 +58,12 @@ public class Instrutor {
 		this.dataNascimento = dataNascimento;
 	}
 
-	/*public List<Turma> getTurmaList() {
-		return turmaList;
-	}
-
-	public void setTurmaList(List<Turma> turmaList) {
-		this.turmaList = turmaList;
-	}*/
+	/*
+	 * public List<Turma> getTurmaList() { return turmaList; }
+	 * 
+	 * public void setTurmaList(List<Turma> turmaList) { this.turmaList = turmaList;
+	 * }
+	 */
 
 	public Integer getIdInstrutor() {
 		return idInstrutor;
@@ -107,7 +104,5 @@ public class Instrutor {
 	public void setTurmaList(List<Turma> turmaList) {
 		this.turmaList = turmaList;
 	}
-	
-	
 
 }

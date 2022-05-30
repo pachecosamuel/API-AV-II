@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 public class InstrutorDTO {
-	
+
 	private Integer idInstrutor;
 
 	private Integer rg;
@@ -14,7 +14,7 @@ public class InstrutorDTO {
 	private Date dataNascimento;
 
 	private Integer titulacaoInstrutor;
-	
+
 	private List<TurmaDTO> turmaDTOList;
 
 	public Integer getIdInstrutor() {
@@ -56,7 +56,7 @@ public class InstrutorDTO {
 	public void setTitulacaoInstrutor(Integer titulacaoInstrutor) {
 		this.titulacaoInstrutor = titulacaoInstrutor;
 	}
-	
+
 	public List<TurmaDTO> getTurmaDTOList() {
 		return turmaDTOList;
 	}
@@ -72,5 +72,4 @@ public class InstrutorDTO {
 				+ ", turmaDTOList=" + turmaDTOList + "]";
 	}
 
-	
 }

@@ -17,29 +17,27 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 @Entity
-@Table(name="turma")
-@JsonIdentityInfo(
-	    generator = ObjectIdGenerators.PropertyGenerator.class,
-	    property = "idTurma")
+@Table(name = "turma")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "idTurma")
 public class Turma {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_turma")
 	private Integer idTurma;
-	
+
 	@NotNull
 	@Column(name = "horario")
 	private Date horarioTurma;
-	
+
 	@NotNull
 	@Column(name = "duracao")
 	private Integer duracaoTurma;
-	
+
 	@NotNull
 	@Column(name = "data_inicio")
 	private Date dataInicio;
-	
+
 	@NotNull
 	@Column(name = "data_fim")
 	private Date dataFim;
@@ -109,9 +107,5 @@ public class Turma {
 	public void setAtividade(Atividade atividade) {
 		this.atividade = atividade;
 	}
-	
-	
-	
-	
-}
 
+}

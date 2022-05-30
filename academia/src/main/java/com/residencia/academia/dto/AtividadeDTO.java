@@ -2,14 +2,12 @@ package com.residencia.academia.dto;
 
 import java.util.List;
 
-import com.residencia.academia.entity.Turma;
-
 public class AtividadeDTO {
-	
+
 	private Integer idAtividade;
 	private String nomeAtividade;
 	private List<TurmaDTO> turmaListDTO;
-	
+
 	public Integer getIdAtividade() {
 		return idAtividade;
 	}
@@ -39,7 +37,5 @@ public class AtividadeDTO {
 		return "AtividadeDTO [idAtividade=" + idAtividade + ", nomeAtividade=" + nomeAtividade + ", turmaList="
 				+ turmaListDTO + "]";
 	}
-	
-	
 
 }

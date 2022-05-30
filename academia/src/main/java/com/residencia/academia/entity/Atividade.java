@@ -17,20 +17,18 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 @Entity
 @Table(name = "atividade")
-@JsonIdentityInfo(
-	    generator = ObjectIdGenerators.PropertyGenerator.class,
-	    property = "idAtividade")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "idAtividade")
 public class Atividade {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_atividade")
 	private Integer idAtividade;
-	
+
 	@Column(name = "nome")
 	@NotBlank(message = "Nome da atividade não informado.")
 	private String nomeAtividade;
-	
+
 	@OneToMany(mappedBy = "atividade")
 	private List<Turma> turmaList;
 
@@ -57,9 +55,5 @@ public class Atividade {
 	public void setTurmaList(List<Turma> turmaList) {
 		this.turmaList = turmaList;
 	}
-	
-	
-	
+
 }
-
-
