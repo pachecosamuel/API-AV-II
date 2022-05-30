@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.residencia.academia.dto.InstrutorDTO;
 import com.residencia.academia.entity.Instrutor;
@@ -78,6 +81,13 @@ public class InstrutorController {
 
 		return new ResponseEntity<>(instrutorService.saveDTO(instrutorDTO), HttpStatus.CREATED);
 
+	}
+
+	@PostMapping(value = "/com-foto", consumes = { MediaType.APPLICATION_JSON_VALUE,
+			MediaType.MULTIPART_FORM_DATA_VALUE })
+	@Operation(summary = "Salver um novo instrutor com foto.")
+	public ResponseEntity<Instrutor> saveInstrutorComFoto(@RequestPart("instrutor") String instrutor, @RequestPart("file") MultipartFile file) {
+		return new ResponseEntity<>(instrutorService.saveInstrutorComFoto(instrutor, file), HttpStatus.CREATED);
 	}
 
 	@PutMapping

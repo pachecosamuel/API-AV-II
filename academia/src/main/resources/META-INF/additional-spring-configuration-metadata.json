@@ -1,5 +1,12 @@
-{"properties": [{
-  "name": "springdoc.version",
-  "type": "java.lang.String",
-  "description": "Define a versão da API."
-}]}
+{"properties": [
+  {
+    "name": "springdoc.version",
+    "type": "java.lang.String",
+    "description": "Define a versão da API."
+  },
+  {
+    "name": "files.folder.path",
+    "type": "java.lang.String",
+    "description": "Define caminho mãe para salvar arquivos recebidos através da API."
+  }
+]}

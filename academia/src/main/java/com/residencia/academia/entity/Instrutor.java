@@ -47,6 +47,9 @@ public class Instrutor {
 	@NotNull(message = "Insira uma titulação válida.")
 	private Integer titulacaoInstrutor;
 
+	@Column(name = "foto")
+	private String fotoInstrutor;
+
 	@OneToMany(mappedBy = "instrutor")
 	private List<Turma> turmaList;
 
@@ -95,6 +98,14 @@ public class Instrutor {
 
 	public void setTitulacaoInstrutor(Integer titulacaoInstrutor) {
 		this.titulacaoInstrutor = titulacaoInstrutor;
+	}
+
+	public String getFotoInstrutor() {
+		return fotoInstrutor;
+	}
+
+	public void setFotoInstrutor(String fotoInstrutor) {
+		this.fotoInstrutor = fotoInstrutor;
 	}
 
 	public List<Turma> getTurmaList() {
