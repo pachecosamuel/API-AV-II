@@ -10,4 +10,8 @@
 
 <hr>
 
--Grupo 2: Bernardo Gonçalves, Jéssica Sabino, Mateus Reis, Samuel Pacheco, Simone Reis.
+#-Grupo 2: Bernardo Gonçalves, Jéssica Sabino, Mateus Reis, Samuel Pacheco, Simone Reis.
+
+<hr>
+
+![gymtech](https://user-images.githubusercontent.com/87822546/171026544-bfb4db09-4d72-4593-b642-cba7cfc03cf4.jpg)
