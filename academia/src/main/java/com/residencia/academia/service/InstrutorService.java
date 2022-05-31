@@ -24,7 +24,7 @@ public class InstrutorService {
 
 	@Value("${files.folder.path}")
 	private Path path;
-	
+
 	@Autowired
 	InstrutorRepository instrutorRepository;
 

@@ -1,4 +1,4 @@
-package config;
+package com.residencia.academia.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -15,23 +15,21 @@ import io.swagger.v3.oas.models.security.SecurityScheme;
 
 @Configuration
 public class SwaggerConfig {
-	
-	
+
 	@Bean
 	public OpenAPI customOpenAPI(@Value("${springdoc.version}") String appVersion) {
 		return new OpenAPI()
-					.components(new Components()
+				.components(new Components()
 						.addSecuritySchemes("basicScheme",
 								new SecurityScheme().type(SecurityScheme.Type.HTTP).scheme("basic"))
 						.addParameters("myHeader1",
 								new Parameter().in("header").schema(new StringSchema()).name("myHeader1"))
 						.addHeaders("myHeader2",
 								new Header().description("myHeader2 header").schema(new StringSchema())))
-						.info(new Info().title("Comercio API Restful Serratec").version(appVersion).description(
-						"API Exemplar de um e-Commerce em API Restful através do Serratec. Mais informaçoes sobre o Swagger: [http://swagger.io](http://swagger.io).")
+				.info(new Info().title("Academia API Restful Serratec").version(appVersion).description(
+						"API Exemplar de uma Academia em API Restful através do Serratec. Mais informaçoes sobre o Swagger: [http://swagger.io](http://swagger.io).")
 						.termsOfService("http://swagger.io/terms/")
 						.license(new License().name("Apache 2.0").url("http://springdoc.org")));
 	}
 
-	
 }

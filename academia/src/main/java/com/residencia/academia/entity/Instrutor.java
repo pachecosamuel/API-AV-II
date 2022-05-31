@@ -29,7 +29,7 @@ public class Instrutor {
 	@Column(name = "id_instrutor")
 	private Integer idInstrutor;
 
-	@Max(value = 9, message = "Campo deve conter entre 7 e 9 dígitos")
+	@Max(value = 9, message = "Campo deve conter entre 7 e 9 dígitos (Sem traços e pontos)")
 	@Column(name = "rg")
 	private Integer rg;
 
@@ -40,7 +40,7 @@ public class Instrutor {
 
 	@Column(name = "nascimento")
 	@NotNull
-	@Past(message = "Data de abertura do Instrutor não pode ser no futuro.")
+	@Past(message = "Data de nascimento do Instrutor não pode ser no futuro.")
 	private Date dataNascimento;
 
 	@Column(name = "titulacao")
